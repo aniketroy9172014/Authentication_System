@@ -1,0 +1,239 @@
+/* style.css - Common styles for Signin, Login, and Welcome pages */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.main-center {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(102, 102, 102, 0.516);
+    border: 2px solid rgba(255, 255, 255, 0.37);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 30px 40px;
+    transition: width 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.wrapper h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.381);
+    outline: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    padding: 20px 45px 20px 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.input-box input:hover {
+    background: rgba(255, 255, 255, 0.571);
+}
+
+.input-box input::placeholder {
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+.input-box:hover input::placeholder {
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+}
+
+.wrapper .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    gap: 10px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.wrapper .register-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p {
+    margin-bottom: 5px;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+/* Improved Media Queries for Full Responsiveness */
+@media (max-width: 1200px) {
+    .wrapper {
+        max-width: 90vw;
+        padding: 24px 24px;
+        min-height: 350px;
+    }
+    .wrapper h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-center {
+        min-height: 100vh;
+    }
+    .wrapper {
+        max-width: 95vw;
+        padding: 18px 10px;
+        min-height: 320px;
+    }
+    .wrapper h1 {
+        font-size: 28px;
+    }
+    .input-box input {
+        font-size: 13px;
+    }
+    .btn {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-center {
+        min-height: 100vh;
+        padding: 0 2vw;
+    }
+    .wrapper {
+        max-width: 100vw;
+        padding: 4vw 2vw;
+        border-radius: 8px;
+        min-height: unset;
+        margin: 10vw 0 5vw 0;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+    }
+    .wrapper h1 {
+        font-size: 6vw;
+        padding-bottom: 4vw;
+    }
+    .input-box {
+        height: auto;
+        margin: 6vw 0;
+    }
+    .input-box input {
+        font-size: 4vw;
+        padding: 4vw 10vw 4vw 4vw;
+        height: 12vw;
+        min-height: 40px;
+        border-radius: 8vw;
+    }
+    .btn {
+        font-size: 4vw;
+        height: 12vw;
+        min-height: 40px;
+        border-radius: 8vw;
+    }
+    .show-password {
+        right: 6vw;
+        font-size: 4vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .register-link {
+        font-size: 3vw;
+        margin: 6vw 0 4vw 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper {
+        padding: 2vw 1vw;
+        min-height: unset;
+    }
+    .wrapper h1 {
+        font-size: 7vw;
+    }
+    .btn {
+        font-size: 5vw;
+        height: 10vw;
+        min-height: 32px;
+    }
+    .input-box input {
+        font-size: 5vw;
+        min-height: 32px;
+    }
+    .register-link {
+        font-size: 4vw;
+    }
+}
